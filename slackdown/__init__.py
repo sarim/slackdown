@@ -83,7 +83,7 @@ def render(txt):
         list_repl = r'<li class="list-item-{}">\g<1></li>'.format(class_name)
         txt = re.sub(list_regex, list_repl, txt)
 
-    # hanlde blockquotes
+    # handle blockquotes
     txt = re.sub(u'(^|\n)(?:&gt;){3}\s?(.*)$', r'\g<1><blockquote>\g<2></blockquote>', txt, flags=re.DOTALL)
     txt = re.sub(u'(?:^|\n)&gt;\s?(.*)\n?', r'<blockquote>\g<1></blockquote>', txt)
 
